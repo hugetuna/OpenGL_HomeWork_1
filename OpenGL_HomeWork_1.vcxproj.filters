@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="來源檔案">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{6a368d78-f880-43ec-a788-8faa0cb46d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\BasicShape">
+      <UniqueIdentifier>{06feb542-2d10-42e1-ba1f-7a186e2c67fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shader">
+      <UniqueIdentifier>{2d877437-0fb5-4023-904b-87ab3b4d8890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Player">
+      <UniqueIdentifier>{47f113da-dba0-4ad0-bb8c-67b3fdfb6914}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\wmhandler.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\initShader.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\arcball.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CShaderPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CQuad.cpp">
+      <Filter>Common\BasicShape</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CShape.cpp">
+      <Filter>Common\BasicShape</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CTriangle.cpp">
+      <Filter>Common\BasicShape</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CCircle.cpp">
+      <Filter>Common\BasicShape</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CTrapezoid.cpp">
+      <Filter>Common\BasicShape</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CHex.cpp">
+      <Filter>Common\BasicShape</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CPlayer.cpp">
+      <Filter>Common\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CPlayerShape.cpp">
+      <Filter>Common\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CBullet.cpp">
+      <Filter>Common\Player</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\wmhandler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\initshader.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\typedefs.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\arcball.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CShaderPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CQuad.h">
+      <Filter>Common\BasicShape</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CShape.h">
+      <Filter>Common\BasicShape</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CTriangle.h">
+      <Filter>Common\BasicShape</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CCircle.h">
+      <Filter>Common\BasicShape</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CTrapezoid.h">
+      <Filter>Common\BasicShape</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CHex.h">
+      <Filter>Common\BasicShape</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CPlayer.h">
+      <Filter>Common\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CPlayerShape.h">
+      <Filter>Common\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CBullet.h">
+      <Filter>Common\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fshader_basic.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="vshader_basic.glsl">
+      <Filter>shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>

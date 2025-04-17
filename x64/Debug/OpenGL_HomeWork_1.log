@@ -1,0 +1,20 @@
+﻿  arcball.cpp
+  CCircle.cpp
+  CPlayer.cpp
+  CPlayerShape.cpp
+  CQuad.cpp
+  CShaderPool.cpp
+  CShape.cpp
+  CTrapezoid.cpp
+  CTriangle.cpp
+  initShader.cpp
+  wmhandler.cpp
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\OpenGLLibraries\glew\include\GL\glew.h(85,1): error C1189: #error:  gl.h included before glew.h
+  (編譯來源檔案 'common/wmhandler.cpp')
+  
+  Main.cpp
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Main.cpp(25,9): warning C4005: 'SCREEN_WIDTH': 巨集重複定義
+      C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\typedefs.h(4,9):
+      參閱 'SCREEN_WIDTH' 之前的定義
+  
+  正在產生程式碼...
