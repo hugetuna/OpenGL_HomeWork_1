@@ -18,7 +18,7 @@
 #include "common/wmhandler.h"
 #include "common/CShaderPool.h"
 #include "common/CPlayer.h"
-#include "common/CBullet.h"
+#include "common/CEnvironmentManager.h"
 
 
 #define SCREEN_WIDTH  600
@@ -33,12 +33,15 @@ GLfloat g_viewScale = 4.0f;
 
 bool g_bMoving = false;
 CPlayer* O_Player;
+CEnvironmentManager* O_EnvironmentManager;
+
 //----------------------------------------------------------------------------
 void loadScene(void)
 {
     // getShader 函式可用於建立 shader program 或取得特定 shader program 的代表 ID 
     g_shaderProg = CShaderPool::instance().getShader("vshader_basic.glsl", "fshader_basic.glsl");
     O_Player = new CPlayer(g_shaderProg);
+    O_EnvironmentManager=new CEnvironmentManager(g_shaderProg);
 
     GLint viewLoc = glGetUniformLocation(g_shaderProg, "mxView"); 	// 取得 MVP 變數的位置
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(g_viewMx));
@@ -46,15 +49,17 @@ void loadScene(void)
     g_projMx = glm::ortho(-3.0f, 3.0f, -4.0f, 4.0f, -2.0f, 2.0f);
     GLint projLoc = glGetUniformLocation(g_shaderProg, "mxProj"); 	// 取得 MVP 變數的位置
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(g_projMx));
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // 設定清除 back buffer 背景的顏色
+    glClearColor(1.0f, 0.6f, 0.95f, 0.8f); // 設定清除 back buffer 背景的顏色
 }
 //----------------------------------------------------------------------------
 
 void render( void )
 {
     glClear(GL_COLOR_BUFFER_BIT);   // 先清背景
-    // 再畫圖  
+    // 再畫圖
+    O_EnvironmentManager->drawEnvironment(); 
     O_Player->render();
+    
 }
 //----------------------------------------------------------------------------
 glm::vec3 mainCharPos;
@@ -62,11 +67,14 @@ void update(float dt)
 {
     O_Player->setPos(mainCharPos);
     O_Player->update(dt);
+    //環境物件
+    O_EnvironmentManager->updateEnvironment(dt);
 }
 
 void releaseAll()
 {
     delete O_Player;
+    delete O_EnvironmentManager;
 }
 
 int main() {

@@ -25,6 +25,12 @@
     <Filter Include="Common\Player">
       <UniqueIdentifier>{47f113da-dba0-4ad0-bb8c-67b3fdfb6914}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common\Player\Bullet">
+      <UniqueIdentifier>{6111526b-9787-44a2-a25e-a2b119cec720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Environment">
+      <UniqueIdentifier>{8d3fe7ca-4d26-438a-8f24-31663cfc6cec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="common\wmhandler.cpp">
@@ -67,7 +73,16 @@
       <Filter>Common\Player</Filter>
     </ClCompile>
     <ClCompile Include="common\CBullet.cpp">
-      <Filter>Common\Player</Filter>
+      <Filter>Common\Player\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CBulletList.cpp">
+      <Filter>Common\Player\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CCloud.cpp">
+      <Filter>Common\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CEnvironmentManager.cpp">
+      <Filter>Common\Environment</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -111,7 +126,16 @@
       <Filter>Common\Player</Filter>
     </ClInclude>
     <ClInclude Include="common\CBullet.h">
-      <Filter>Common\Player</Filter>
+      <Filter>Common\Player\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CBulletList.h">
+      <Filter>Common\Player\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CCloud.h">
+      <Filter>Common\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CEnvironmentManager.h">
+      <Filter>Common\Environment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -10,19 +10,16 @@ CPlayer::CPlayer(GLuint shaderID) {
 	radius = 0.6;
 }
 CPlayer::~CPlayer() {
-	for (auto b : _bullets) delete b;
 }
 void CPlayer::shoot() {
 	glm::vec3 bulletDir(0, 1, 0); // 固定向上
 	CBullet* bullet = new CBullet(getPos(), bulletDir, 4.0f, _shaderID);
-	_bullets.push_back(bullet);
+	_bullets.add(bullet);
 }
 void CPlayer::update(float dt) {
 	shape.updateAtOnce(position, dt);
 	// 更新子彈
-	for (auto bullet : _bullets) {
-		bullet->update(dt);
-	}
+	_bullets.update(dt);
 }
 void CPlayer::setPos(glm::vec3 destination) {
 	position = destination;
@@ -30,7 +27,5 @@ void CPlayer::setPos(glm::vec3 destination) {
 void CPlayer::render() {
 	shape.drawAtOnce();
 	// 畫出所有子彈
-	for (auto bullet : _bullets) {
-		bullet->draw();
-	}
+	_bullets.draw();
 }

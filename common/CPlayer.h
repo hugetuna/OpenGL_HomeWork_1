@@ -10,6 +10,7 @@
 
 #include "CPlayerShape.h"
 #include "CBullet.h"
+#include "CBulletList.h"
 
 class CPlayer {
 public:
@@ -24,7 +25,7 @@ public:
     glm::vec3 getPos() { return position; }
     float getRadius() { return radius; }
 private:
-    std::vector<CBullet*> _bullets;
+    CBulletList _bullets;
     CPlayerShape shape;
     glm::vec3 position;
     GLuint _shaderID;

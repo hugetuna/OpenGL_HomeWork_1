@@ -139,7 +139,10 @@
   <ItemGroup>
     <ClCompile Include="common\arcball.cpp" />
     <ClCompile Include="common\CBullet.cpp" />
+    <ClCompile Include="common\CBulletList.cpp" />
     <ClCompile Include="common\CCircle.cpp" />
+    <ClCompile Include="common\CCloud.cpp" />
+    <ClCompile Include="common\CEnvironmentManager.cpp" />
     <ClCompile Include="common\CHex.cpp" />
     <ClCompile Include="common\CPlayer.cpp" />
     <ClCompile Include="common\CPlayerShape.cpp" />
@@ -155,7 +158,10 @@
   <ItemGroup>
     <ClInclude Include="common\arcball.h" />
     <ClInclude Include="common\CBullet.h" />
+    <ClInclude Include="common\CBulletList.h" />
     <ClInclude Include="common\CCircle.h" />
+    <ClInclude Include="common\CCloud.h" />
+    <ClInclude Include="common\CEnvironmentManager.h" />
     <ClInclude Include="common\CHex.h" />
     <ClInclude Include="common\CPlayer.h" />
     <ClInclude Include="common\CPlayerShape.h" />

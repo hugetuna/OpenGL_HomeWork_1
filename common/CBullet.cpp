@@ -28,6 +28,11 @@ CBullet::~CBullet() {
 void CBullet::update(float deltaTime) {
     _position += _velocity * _speed * deltaTime;
     _bulletShape->setTransformMatrix(glm::translate(glm::mat4(1.0f), _position));
+    // 邊界判斷（比投影略大一點）
+    if (_position.x < -3.2f || _position.x > 3.2f ||
+        _position.y < -4.2f || _position.y > 4.2f) {
+        deactivate();
+    }
 }
 
 void CBullet::draw() {
