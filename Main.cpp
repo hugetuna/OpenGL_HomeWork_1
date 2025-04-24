@@ -19,6 +19,7 @@
 #include "common/CShaderPool.h"
 #include "common/CPlayer.h"
 #include "common/CEnvironmentManager.h"
+#include "common/CEnemyShape_Bat.h"
 
 
 #define SCREEN_WIDTH  600
@@ -34,7 +35,7 @@ GLfloat g_viewScale = 4.0f;
 bool g_bMoving = false;
 CPlayer* O_Player;
 CEnvironmentManager* O_EnvironmentManager;
-
+CEnemyShape_Bat* O_EnemyShape_Bat;
 //----------------------------------------------------------------------------
 void loadScene(void)
 {
@@ -42,6 +43,9 @@ void loadScene(void)
     g_shaderProg = CShaderPool::instance().getShader("vshader_basic.glsl", "fshader_basic.glsl");
     O_Player = new CPlayer(g_shaderProg);
     O_EnvironmentManager=new CEnvironmentManager(g_shaderProg);
+    O_EnemyShape_Bat = new CEnemyShape_Bat(g_shaderProg);
+    O_EnemyShape_Bat->setupVertexAttributesAtOnce();
+    O_EnemyShape_Bat->setShaderIDAtOnce();
 
     GLint viewLoc = glGetUniformLocation(g_shaderProg, "mxView"); 	// 取得 MVP 變數的位置
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(g_viewMx));
@@ -59,7 +63,7 @@ void render( void )
     // 再畫圖
     O_EnvironmentManager->drawEnvironment(); 
     O_Player->render();
-    
+    O_EnemyShape_Bat->drawAtOnce();
 }
 //----------------------------------------------------------------------------
 glm::vec3 mainCharPos;
@@ -67,6 +71,7 @@ void update(float dt)
 {
     O_Player->setPos(mainCharPos);
     O_Player->update(dt);
+    O_EnemyShape_Bat->updateAtOnce(glm::vec3(0, 0, 0), dt);
     //環境物件
     O_EnvironmentManager->updateEnvironment(dt);
 }
@@ -75,6 +80,7 @@ void releaseAll()
 {
     delete O_Player;
     delete O_EnvironmentManager;
+    delete O_EnemyShape_Bat;
 }
 
 int main() {

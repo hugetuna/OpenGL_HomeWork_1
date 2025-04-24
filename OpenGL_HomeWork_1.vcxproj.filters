@@ -31,6 +31,9 @@
     <Filter Include="Common\Environment">
       <UniqueIdentifier>{8d3fe7ca-4d26-438a-8f24-31663cfc6cec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common\Enemy">
+      <UniqueIdentifier>{6c886efa-e609-4d07-b000-979813a513a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="common\wmhandler.cpp">
@@ -84,6 +87,15 @@
     <ClCompile Include="common\CEnvironmentManager.cpp">
       <Filter>Common\Environment</Filter>
     </ClCompile>
+    <ClCompile Include="common\CEnemy.cpp">
+      <Filter>Common\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CEnemyShape.cpp">
+      <Filter>Common\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CEnemyShape_Bat.cpp">
+      <Filter>Common\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\wmhandler.h">
@@ -136,6 +148,15 @@
     </ClInclude>
     <ClInclude Include="common\CEnvironmentManager.h">
       <Filter>Common\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CEnemy.h">
+      <Filter>Common\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CEnemyShape.h">
+      <Filter>Common\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CEnemyShape_Bat.h">
+      <Filter>Common\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

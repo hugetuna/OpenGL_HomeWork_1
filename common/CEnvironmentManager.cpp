@@ -52,6 +52,6 @@ void CEnvironmentManager::spawnCloud() {
 	float x = -3.0f + static_cast<float>(rand()) / RAND_MAX * 6.0f;  // 在 -3 到 3 之間
 	float speed = 0.2f + static_cast<float>(rand()) / RAND_MAX * 0.4f;  // 0.2~0.6
 
-	glm::vec3 pos(x, 4.5, 0.0f);  // 從畫面右邊外生成
+	glm::vec3 pos(x, 4.5, 0.0f);  // 從畫面上方生成
 	_clouds.push_back(new CCloud(pos, speed, _shaderID));
 }

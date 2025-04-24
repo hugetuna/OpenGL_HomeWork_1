@@ -3,6 +3,9 @@ C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWo
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CBulletList.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CBulletList.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CCircle.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CCircle.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CCloud.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CCloud.obj
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemy.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemy.obj
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemyShape.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemyShape.obj
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemyShape_Bat.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemyShape_Bat.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnvironmentManager.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnvironmentManager.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CHex.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CHex.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CPlayer.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CPlayer.obj

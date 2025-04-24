@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -142,6 +142,9 @@
     <ClCompile Include="common\CBulletList.cpp" />
     <ClCompile Include="common\CCircle.cpp" />
     <ClCompile Include="common\CCloud.cpp" />
+    <ClCompile Include="common\CEnemy.cpp" />
+    <ClCompile Include="common\CEnemyShape.cpp" />
+    <ClCompile Include="common\CEnemyShape_Bat.cpp" />
     <ClCompile Include="common\CEnvironmentManager.cpp" />
     <ClCompile Include="common\CHex.cpp" />
     <ClCompile Include="common\CPlayer.cpp" />
@@ -161,6 +164,8 @@
     <ClInclude Include="common\CBulletList.h" />
     <ClInclude Include="common\CCircle.h" />
     <ClInclude Include="common\CCloud.h" />
+    <ClInclude Include="common\CEnemyShape.h" />
+    <ClInclude Include="common\CEnemyShape_Bat.h" />
     <ClInclude Include="common\CEnvironmentManager.h" />
     <ClInclude Include="common\CHex.h" />
     <ClInclude Include="common\CPlayer.h" />
@@ -170,6 +175,7 @@
     <ClInclude Include="common\CShape.h" />
     <ClInclude Include="common\CTrapezoid.h" />
     <ClInclude Include="common\CTriangle.h" />
+    <ClInclude Include="common\CEnemy.h" />
     <ClInclude Include="common\initshader.h" />
     <ClInclude Include="common\typedefs.h" />
     <ClInclude Include="common\wmhandler.h" />
