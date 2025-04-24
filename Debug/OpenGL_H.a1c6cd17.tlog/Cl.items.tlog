@@ -6,6 +6,8 @@ C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWo
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemy.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemy.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemyShape.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemyShape.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemyShape_Bat.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemyShape_Bat.obj
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemyShape_Boxy.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemyShape_Boxy.obj
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnemyShape_Slime.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnemyShape_Slime.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CEnvironmentManager.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CEnvironmentManager.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CHex.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CHex.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CPlayer.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CPlayer.obj
@@ -13,6 +15,7 @@ C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWo
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CQuad.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CQuad.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CShaderPool.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CShaderPool.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CShape.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CShape.obj
+C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CStar.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CStar.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CTrapezoid.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CTrapezoid.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\CTriangle.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\CTriangle.obj
 C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\common\initShader.cpp;C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\OpenGL_HomeWork_1\Debug\initShader.obj

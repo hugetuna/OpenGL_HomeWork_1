@@ -96,6 +96,15 @@
     <ClCompile Include="common\CEnemyShape_Bat.cpp">
       <Filter>Common\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="common\CEnemyShape_Slime.cpp">
+      <Filter>Common\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CStar.cpp">
+      <Filter>Common\BasicShape</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CEnemyShape_Boxy.cpp">
+      <Filter>Common\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\wmhandler.h">
@@ -156,6 +165,15 @@
       <Filter>Common\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="common\CEnemyShape_Bat.h">
+      <Filter>Common\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CEnemyShape_Slime.h">
+      <Filter>Common\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CStar.h">
+      <Filter>Common\BasicShape</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CEnemyShape_Boxy.h">
       <Filter>Common\Enemy</Filter>
     </ClInclude>
   </ItemGroup>

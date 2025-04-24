@@ -145,6 +145,8 @@
     <ClCompile Include="common\CEnemy.cpp" />
     <ClCompile Include="common\CEnemyShape.cpp" />
     <ClCompile Include="common\CEnemyShape_Bat.cpp" />
+    <ClCompile Include="common\CEnemyShape_Boxy.cpp" />
+    <ClCompile Include="common\CEnemyShape_Slime.cpp" />
     <ClCompile Include="common\CEnvironmentManager.cpp" />
     <ClCompile Include="common\CHex.cpp" />
     <ClCompile Include="common\CPlayer.cpp" />
@@ -152,6 +154,7 @@
     <ClCompile Include="common\CQuad.cpp" />
     <ClCompile Include="common\CShaderPool.cpp" />
     <ClCompile Include="common\CShape.cpp" />
+    <ClCompile Include="common\CStar.cpp" />
     <ClCompile Include="common\CTrapezoid.cpp" />
     <ClCompile Include="common\CTriangle.cpp" />
     <ClCompile Include="common\initShader.cpp" />
@@ -166,6 +169,8 @@
     <ClInclude Include="common\CCloud.h" />
     <ClInclude Include="common\CEnemyShape.h" />
     <ClInclude Include="common\CEnemyShape_Bat.h" />
+    <ClInclude Include="common\CEnemyShape_Boxy.h" />
+    <ClInclude Include="common\CEnemyShape_Slime.h" />
     <ClInclude Include="common\CEnvironmentManager.h" />
     <ClInclude Include="common\CHex.h" />
     <ClInclude Include="common\CPlayer.h" />
@@ -173,6 +178,7 @@
     <ClInclude Include="common\CQuad.h" />
     <ClInclude Include="common\CShaderPool.h" />
     <ClInclude Include="common\CShape.h" />
+    <ClInclude Include="common\CStar.h" />
     <ClInclude Include="common\CTrapezoid.h" />
     <ClInclude Include="common\CTriangle.h" />
     <ClInclude Include="common\CEnemy.h" />

@@ -20,6 +20,8 @@
 #include "common/CPlayer.h"
 #include "common/CEnvironmentManager.h"
 #include "common/CEnemyShape_Bat.h"
+#include "common/CEnemyShape_Slime.h"
+#include "common/CEnemyShape_Boxy.h"
 
 
 #define SCREEN_WIDTH  600
@@ -36,6 +38,8 @@ bool g_bMoving = false;
 CPlayer* O_Player;
 CEnvironmentManager* O_EnvironmentManager;
 CEnemyShape_Bat* O_EnemyShape_Bat;
+CEnemyShape_Slime* O_EnemyShape_Slime;
+CEnemyShape_Boxy* O_EnemyShape_Boxy;
 //----------------------------------------------------------------------------
 void loadScene(void)
 {
@@ -43,9 +47,18 @@ void loadScene(void)
     g_shaderProg = CShaderPool::instance().getShader("vshader_basic.glsl", "fshader_basic.glsl");
     O_Player = new CPlayer(g_shaderProg);
     O_EnvironmentManager=new CEnvironmentManager(g_shaderProg);
+    //測試蝙蝠
     O_EnemyShape_Bat = new CEnemyShape_Bat(g_shaderProg);
     O_EnemyShape_Bat->setupVertexAttributesAtOnce();
     O_EnemyShape_Bat->setShaderIDAtOnce();
+    //測試史萊姆
+    O_EnemyShape_Slime = new CEnemyShape_Slime(g_shaderProg);
+    O_EnemyShape_Slime->setupVertexAttributesAtOnce();
+    O_EnemyShape_Slime->setShaderIDAtOnce();
+    //測試阿方
+    O_EnemyShape_Boxy = new CEnemyShape_Boxy(g_shaderProg);
+    O_EnemyShape_Boxy->setupVertexAttributesAtOnce();
+    O_EnemyShape_Boxy->setShaderIDAtOnce();
 
     GLint viewLoc = glGetUniformLocation(g_shaderProg, "mxView"); 	// 取得 MVP 變數的位置
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(g_viewMx));
@@ -64,6 +77,8 @@ void render( void )
     O_EnvironmentManager->drawEnvironment(); 
     O_Player->render();
     O_EnemyShape_Bat->drawAtOnce();
+    O_EnemyShape_Slime->drawAtOnce();
+    O_EnemyShape_Boxy->drawAtOnce();
 }
 //----------------------------------------------------------------------------
 glm::vec3 mainCharPos;
@@ -72,6 +87,8 @@ void update(float dt)
     O_Player->setPos(mainCharPos);
     O_Player->update(dt);
     O_EnemyShape_Bat->updateAtOnce(glm::vec3(0, 0, 0), dt);
+    O_EnemyShape_Slime->updateAtOnce(glm::vec3(2, 0, 0), dt);
+    O_EnemyShape_Boxy->updateAtOnce(glm::vec3(-2, 0, 0), dt);
     //環境物件
     O_EnvironmentManager->updateEnvironment(dt);
 }
@@ -81,6 +98,8 @@ void releaseAll()
     delete O_Player;
     delete O_EnvironmentManager;
     delete O_EnemyShape_Bat;
+    delete O_EnemyShape_Slime;
+    delete O_EnemyShape_Boxy;
 }
 
 int main() {
