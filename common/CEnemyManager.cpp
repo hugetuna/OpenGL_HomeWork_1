@@ -65,7 +65,7 @@ void CEnemyManager::renderAllEnemy() {
 void CEnemyManager::spawnEnemy() {
     int type = std::rand() % 3;  // 0:Bat, 1:Slime, 2:Boxy
     CEnemy* newEnemy = nullptr;
-    if (_enemys.size()<1)
+    if (_enemys.size()<3)
     {
         switch (type) {
         case 0:

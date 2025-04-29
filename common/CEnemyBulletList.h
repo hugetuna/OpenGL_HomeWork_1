@@ -18,7 +18,8 @@ public:
     void update(float deltaTime);
     void draw();
     EnemyBulletNode* getHead() const { return head; }
-
+    CEnemyBulletList(const CEnemyBulletList&) = delete;
+    CEnemyBulletList& operator=(const CEnemyBulletList&) = delete;
 private:
     EnemyBulletNode* head;
 };

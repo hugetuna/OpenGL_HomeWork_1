@@ -68,6 +68,13 @@ void CPlayerShape::updateAtOnce(glm::vec3 pos,float dt) {
     }
     for (int i = 0; i < shieldCount; i++)
     {
+        float angle = 2.0f * PI * i / shieldCount;
+        float x = cos(angle) * 0.8f;
+        float y = sin(angle) * 0.8f;
+        _shields[i].setPos(glm::vec3(x, y, 0.0f));
+    }
+    for (int i = 0; i < shieldCount; i++)
+    {
         float shieldRadians = glm::radians(shieldAngle);
         glm::mat4 rotateMX=glm::rotate(glm::mat4(1.0f), shieldRadians, glm::vec3(0.0f, 0.0f, 1.0f));
         glm::mat4 transformMX = glm::translate(glm::mat4(1.0f), pos);
@@ -82,4 +89,14 @@ void CPlayerShape::drawAtOnce() {
     {
         _shields[i].draw();
     }
+}
+//¬ÞµP¼W´îÅÞ¿è
+void CPlayerShape::removeOneShield() {
+    if (shieldCount > 0) {
+        shieldCount--;
+    }
+}
+
+int CPlayerShape::getShieldCount() {
+    return shieldCount;
 }

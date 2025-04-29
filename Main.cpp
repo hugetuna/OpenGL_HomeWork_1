@@ -31,6 +31,7 @@
 Arcball g_arcball;
 
 GLuint g_shaderProg;
+GLuint g_shaderProg_player;
 glm::mat4 g_viewMx = glm::mat4(1.0f);
 glm::mat4 g_projMx = glm::mat4(1.0f);
 GLfloat g_viewScale = 4.0f;
@@ -43,8 +44,11 @@ CEnemyManager* O_EnemyManager;
 void loadScene(void)
 {
     // getShader 函式可用於建立 shader program 或取得特定 shader program 的代表 ID 
+    //玩家相關的shader設定
+    g_shaderProg_player = CShaderPool::instance().getShader("vshader_player.glsl", "fshader_player.glsl");
+    O_Player = new CPlayer(g_shaderProg_player);
+    //普通物件的shader設定
     g_shaderProg = CShaderPool::instance().getShader("vshader_basic.glsl", "fshader_basic.glsl");
-    O_Player = new CPlayer(g_shaderProg);
     O_EnvironmentManager=new CEnvironmentManager(g_shaderProg);
     O_EnemyManager = new CEnemyManager(g_shaderProg);
     GLint viewLoc = glGetUniformLocation(g_shaderProg, "mxView"); 	// 取得 MVP 變數的位置
@@ -52,17 +56,31 @@ void loadScene(void)
 
     g_projMx = glm::ortho(-3.0f, 3.0f, -4.0f, 4.0f, -2.0f, 2.0f);
     GLint projLoc = glGetUniformLocation(g_shaderProg, "mxProj"); 	// 取得 MVP 變數的位置
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(g_projMx));
-    glClearColor(1.0f, 0.6f, 0.95f, 0.8f); // 設定清除 back buffer 背景的顏色
+
+    
+    glClearColor(1.0f, 0.6f, 0.95f, 0.8f); 
 }
 //----------------------------------------------------------------------------
 
 void render( void )
 {
     glClear(GL_COLOR_BUFFER_BIT);   // 先清背景
-    // 再畫圖
+
+    // 設定 g_shaderProg (敵人、環境)
+    glUseProgram(g_shaderProg);
+    GLint viewLoc = glGetUniformLocation(g_shaderProg, "mxView");
+    GLint projLoc = glGetUniformLocation(g_shaderProg, "mxProj");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(g_viewMx));
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(g_projMx));
     O_EnvironmentManager->drawEnvironment();
     O_EnemyManager->renderAllEnemy();
+
+    // 設定 g_shaderProg_player（玩家）
+    glUseProgram(g_shaderProg_player);
+    viewLoc = glGetUniformLocation(g_shaderProg_player, "mxView");
+    projLoc = glGetUniformLocation(g_shaderProg_player, "mxProj");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(g_viewMx));
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(g_projMx));
     O_Player->render();
 }
 //----------------------------------------------------------------------------
@@ -70,7 +88,7 @@ glm::vec3 mainCharPos;
 void update(float dt)
 {
     O_Player->setPos(mainCharPos);
-    O_Player->update(dt);
+    O_Player->update(dt, O_EnemyManager->getBulletList());
     O_EnemyManager->updateAllEnemy(dt, O_Player->getBulletList(), O_Player->getPos());
     //環境物件
     O_EnvironmentManager->updateEnvironment(dt);

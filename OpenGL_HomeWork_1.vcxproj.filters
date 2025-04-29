@@ -223,5 +223,11 @@
     <None Include="vshader_basic.glsl">
       <Filter>shader</Filter>
     </None>
+    <None Include="fshader_player.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="vshader_player.glsl">
+      <Filter>shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

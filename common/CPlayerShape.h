@@ -22,7 +22,9 @@ public:
     void setShaderIDAtOnce(GLuint shaderID);
     void updateAtOnce(glm::vec3 pos, float dt);
     void drawAtOnce();
-
+    //盾牌增減邏輯
+    void removeOneShield();
+    int getShieldCount(); // 可選，幫助外部查詢盾數
 private:
     CTriangle* _hat;
     CCircle* _head;

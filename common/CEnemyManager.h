@@ -17,7 +17,8 @@ public:
     void updateAllEnemy(float deltaTime, CBulletList& playerBullet,glm::vec3 playerPos);
     void renderAllEnemy();
     void spawnEnemy();
-
+    //¼Ä¤H¤l¼u¶°
+    CEnemyBulletList& getBulletList() { return _EnemyBullets; }
 private:
     std::vector<CEnemy*> _enemys;
     float _spawnTimer;

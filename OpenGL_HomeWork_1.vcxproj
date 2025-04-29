@@ -200,7 +200,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="fshader_basic.glsl" />
+    <None Include="fshader_player.glsl" />
     <None Include="vshader_basic.glsl" />
+    <None Include="vshader_player.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -16,12 +16,12 @@ CEnemyBulletList::~CEnemyBulletList() {
 }
 
 void CEnemyBulletList::add(CEnemyBullet* bullet) {
-    if (bullet) {
+    /*if (bullet) {
         std::cout << "新增一顆敵人子彈！ 位置: ("
             << bullet->getPosition().x << ", "
             << bullet->getPosition().y << ", "
             << bullet->getPosition().z << ")\n";
-    }
+    }*/
     EnemyBulletNode* node = new EnemyBulletNode(bullet);
     node->next = head;
     head = node;

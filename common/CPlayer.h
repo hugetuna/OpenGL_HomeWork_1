@@ -11,13 +11,14 @@
 #include "CPlayerShape.h"
 #include "CBullet.h"
 #include "CBulletList.h"
+#include "CEnemyBulletList.h"
 
 class CPlayer {
 public:
 
     CPlayer(GLuint shaderID);
     ~CPlayer();
-    void update(float dt);
+    void update(float dt,CEnemyBulletList& enemyBullets);
 
     void render();
     void setPos(glm::vec3 destination);
@@ -31,4 +32,5 @@ private:
     glm::vec3 position;
     GLuint _shaderID;
     float radius; // 頭跟斗篷差不多這麼大
+    float flashTimer;
 };
