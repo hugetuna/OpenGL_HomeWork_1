@@ -24,6 +24,7 @@ public:
     void shoot(); // Æg¿ª•\Ø‡
     glm::vec3 getPos() { return position; }
     float getRadius() { return radius; }
+    CBulletList& getBulletList() { return _bullets; }
 private:
     CBulletList _bullets;
     CPlayerShape shape;

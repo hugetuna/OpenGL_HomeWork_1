@@ -18,6 +18,12 @@ public:
     void add(CBullet* bullet);
     void update(float deltaTime);
     void draw();
+    void setHead(BulletNode* pBulletNode) {
+        head = pBulletNode;
+    }
+    BulletNode* getHead() {
+        return head;
+    }
     CBulletList(const CBulletList&) = delete;
     CBulletList& operator=(const CBulletList&) = delete;
 };

@@ -67,4 +67,3 @@ void CBulletList::draw() {
         current = current->next;
     }
 }
-
