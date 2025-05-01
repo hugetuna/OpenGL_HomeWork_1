@@ -15,7 +15,7 @@ CEnemy::~CEnemy() {
 		_pShape = nullptr;
 	}
 }
-void CEnemy::update(float dt) {
+void CEnemy::update(float dt, glm::vec3 playerPos) {
 	_pShape->updateAtOnce(_position,dt);
 	_attackTimer += dt;
 }

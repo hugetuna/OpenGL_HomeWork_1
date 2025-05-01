@@ -14,7 +14,9 @@ class CEnemy_Bat:public CEnemy {
 public:
     CEnemy_Bat(GLuint shaderID);
     ~CEnemy_Bat();
-    virtual CEnemyBullet* shoot(glm::vec3 targetPos) override;
+    virtual void update(float dt,glm::vec3 playerPos) override;
+    virtual std::vector<CEnemyBullet*> shoot(glm::vec3 targetPos) override;
 private:
-    
+    bool _flyDirection;//true向上飛、false向下
+    float _flySpeed;
 };

@@ -19,10 +19,8 @@
 #include "common/CShaderPool.h"
 #include "common/CPlayer.h"
 #include "common/CEnvironmentManager.h"
-#include "common/CEnemy_Bat.h"
-#include "common/CEnemy_Slime.h"
-#include "common/CEnemy_Boxy.h"
 #include "common/CEnemyManager.h"
+#include "common/CBoss.h"
 
 
 #define SCREEN_WIDTH  600
@@ -40,6 +38,7 @@ bool g_bMoving = false;
 CPlayer* O_Player;
 CEnvironmentManager* O_EnvironmentManager;
 CEnemyManager* O_EnemyManager;
+CBoss* boss;
 //----------------------------------------------------------------------------
 void loadScene(void)
 {
@@ -74,7 +73,6 @@ void render( void )
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(g_projMx));
     O_EnvironmentManager->drawEnvironment();
     O_EnemyManager->renderAllEnemy();
-
     // 設定 g_shaderProg_player（玩家）
     glUseProgram(g_shaderProg_player);
     viewLoc = glGetUniformLocation(g_shaderProg_player, "mxView");

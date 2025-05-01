@@ -6,18 +6,24 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include <vector>
-#include "CEnemy.h"
-#include "CEnemyBullet.h"
-#include "CEnemyShape_Slime.h"
 
-class CEnemy_Slime :public CEnemy {
+#include <iostream>
+#include "CCircle.h"
+#include "CEnemy.h"
+#include "CBossShape.h"
+class CBoss : public CEnemy {
 public:
-    CEnemy_Slime(GLuint shaderID);
-    ~CEnemy_Slime();
+    CBoss(GLuint shaderID);
+    ~CBoss();
     virtual void update(float dt, glm::vec3 playerPos) override;
     virtual std::vector<CEnemyBullet*> shoot(glm::vec3 targetPos) override;
+    bool readyToShoot() override;
+
 private:
     float _moveSpeed;
-    bool _bAttackWay;//true為上三角，false為下三角
+    int _stage;
 };
+
+
+
+

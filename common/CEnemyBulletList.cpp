@@ -15,16 +15,19 @@ CEnemyBulletList::~CEnemyBulletList() {
     }
 }
 
-void CEnemyBulletList::add(CEnemyBullet* bullet) {
+void CEnemyBulletList::add(std::vector<CEnemyBullet*>& bullets) {
     /*if (bullet) {
         std::cout << "新增一顆敵人子彈！ 位置: ("
             << bullet->getPosition().x << ", "
             << bullet->getPosition().y << ", "
             << bullet->getPosition().z << ")\n";
     }*/
-    EnemyBulletNode* node = new EnemyBulletNode(bullet);
-    node->next = head;
-    head = node;
+    for (CEnemyBullet* bullet : bullets) {
+        EnemyBulletNode* node = new EnemyBulletNode(bullet);
+        node->next = head;
+        head = node;
+    }
+    
 }
 
 void CEnemyBulletList::update(float deltaTime) {

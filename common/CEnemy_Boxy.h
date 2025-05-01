@@ -15,7 +15,8 @@ class CEnemy_Boxy :public CEnemy {
 public:
     CEnemy_Boxy(GLuint shaderID);
     ~CEnemy_Boxy();
-    virtual CEnemyBullet* shoot(glm::vec3 targetPos) override;
+    virtual void update(float dt, glm::vec3 playerPos) override;
+    virtual std::vector<CEnemyBullet*> shoot(glm::vec3 targetPos) override;
 private:
-    
+    float _moveTime;
 };

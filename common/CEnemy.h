@@ -17,15 +17,15 @@ public:
 
     CEnemy(GLuint shaderID);
     virtual ~CEnemy();
-    virtual void update(float dt);
+    virtual void update(float dt, glm::vec3 playerPos);
     virtual void render();
 
     void setPos(glm::vec3 destination);
     glm::vec3 getPos() { return _position; }
     float getRadius() { return _radius; }
     //µo®g¤l¼u
-    virtual CEnemyBullet* shoot(glm::vec3 targetPos) { return nullptr; }
-    bool readyToShoot();
+    virtual std::vector<CEnemyBullet*> shoot(glm::vec3 targetPos) = 0;
+    virtual bool readyToShoot();
     //¨ü¶ËÅÞ¿è
     void takeDamage(int dmg);
     bool isDead();

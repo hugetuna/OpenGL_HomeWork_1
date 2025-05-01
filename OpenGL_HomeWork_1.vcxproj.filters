@@ -37,6 +37,9 @@
     <Filter Include="Common\Enemy\Bullet">
       <UniqueIdentifier>{dae53138-22b3-415c-92e4-3a63f538e0a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common\Enemy\Boss">
+      <UniqueIdentifier>{6c40d1b4-5ecb-4b9f-8bd5-6bfddcb56e9b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="common\wmhandler.cpp">
@@ -126,6 +129,12 @@
     <ClCompile Include="common\CEnemyBulletList.cpp">
       <Filter>Common\Enemy\Bullet</Filter>
     </ClCompile>
+    <ClCompile Include="common\CBossShape.cpp">
+      <Filter>Common\Enemy\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CBoss.cpp">
+      <Filter>Common\Enemy\Boss</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\wmhandler.h">
@@ -214,6 +223,12 @@
     </ClInclude>
     <ClInclude Include="common\CEnemyBulletList.h">
       <Filter>Common\Enemy\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CBossShape.h">
+      <Filter>Common\Enemy\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CBoss.h">
+      <Filter>Common\Enemy\Boss</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -138,6 +138,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="common\arcball.cpp" />
+    <ClCompile Include="common\CBoss.cpp" />
+    <ClCompile Include="common\CBossShape.cpp" />
     <ClCompile Include="common\CBullet.cpp" />
     <ClCompile Include="common\CBulletList.cpp" />
     <ClCompile Include="common\CCircle.cpp" />
@@ -169,6 +171,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\arcball.h" />
+    <ClInclude Include="common\CBoss.h" />
+    <ClInclude Include="common\CBossShape.h" />
     <ClInclude Include="common\CBullet.h" />
     <ClInclude Include="common\CBulletList.h" />
     <ClInclude Include="common\CCircle.h" />

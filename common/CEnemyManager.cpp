@@ -10,6 +10,10 @@ CEnemyManager::~CEnemyManager() {
     for (CEnemy* enemy : _enemys) {
         delete enemy;
     }
+    if (_boss) {
+        delete _boss;
+        _boss = nullptr;
+    }
     _enemys.clear();
 }
 
@@ -22,7 +26,7 @@ void CEnemyManager::updateAllEnemy(float deltaTime, CBulletList& playerBullets, 
 
     for (auto it = _enemys.begin(); it != _enemys.end(); ) {
         CEnemy* enemy = *it;
-        enemy->update(deltaTime);
+        enemy->update(deltaTime, playerPos);
 
         // 被子彈打到
         for (BulletNode* current = playerBullets.getHead(); current != nullptr; current = current->next) {
@@ -39,14 +43,46 @@ void CEnemyManager::updateAllEnemy(float deltaTime, CBulletList& playerBullets, 
         if (enemy->isDead()) {
             delete enemy;
             it = _enemys.erase(it);
+            _point++; // 擊殺數 +1
+            //招喚boss
+            if (_point >= 5 && !_bossAppeared) {
+                _bossAppeared = true;
+                _boss = new CBoss(_shaderID);
+                _boss->setPos(glm::vec3(0.0f, 4.0f, 0.0f)); // 初始位置可調整
+            }
         }
         else {
             //在這裡檢查readyToShoot
             if (enemy->readyToShoot()) {
-                CEnemyBullet* bullet = enemy->shoot(playerPos);
+                std::vector<CEnemyBullet*> bullet = enemy->shoot(playerPos);
                 _EnemyBullets.add(bullet);
             }
             ++it;
+        }
+    }
+    //boss獨立計算
+    if (_bossAppeared && _boss) {
+        _boss->update(deltaTime, playerPos);
+        // 檢查玩家子彈擊中 Boss
+        for (BulletNode* current = playerBullets.getHead(); current != nullptr; current = current->next) {
+            if (current->bullet->isActive()) {
+                float dist = glm::length(_boss->getPos() - current->bullet->getPosition());
+                if (dist < _boss->getRadius()) {
+                    _boss->takeDamage(1);
+                    current->bullet->deactivate();
+                }
+            }
+        }
+        // Boss 是否死亡
+        if (_boss->isDead()) {
+            delete _boss;
+            _boss = nullptr;
+        }
+        else {
+            if (_boss->readyToShoot()) {
+                std::vector<CEnemyBullet*> bossBullets = _boss->shoot(playerPos);
+                _EnemyBullets.add(bossBullets);
+            }
         }
     }
     _EnemyBullets.update(deltaTime);
@@ -58,6 +94,9 @@ void CEnemyManager::updateAllEnemy(float deltaTime, CBulletList& playerBullets, 
 void CEnemyManager::renderAllEnemy() {
     for (CEnemy* enemy : _enemys) {
         enemy->render();
+    }
+    if (_bossAppeared && _boss) {
+        _boss->render();
     }
     _EnemyBullets.draw();
 }

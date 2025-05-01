@@ -7,7 +7,7 @@ CPlayer::CPlayer(GLuint shaderID) {
 	_shaderID = shaderID;
 	shape.updateAtOnce(glm::vec3(0, 0, 0), 0);
 	position = glm::vec3(0, 0, 0);
-	radius = 0.6;
+	radius = 0.3f;
 	flashTimer = 0;
 }
 CPlayer::~CPlayer() {
@@ -27,6 +27,7 @@ void CPlayer::update(float dt, CEnemyBulletList& enemyBullets) {
 			if (dist < this->getRadius()) {
 				current->bullet->deactivate();
 				shape.removeOneShield();
+				shape.changeHat();
 				flashTimer = 0.5f;
 			}
 		}

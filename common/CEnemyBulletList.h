@@ -1,5 +1,5 @@
 #pragma once
-
+#include <vector>
 #include "CEnemyBullet.h"
 
 struct EnemyBulletNode {
@@ -14,7 +14,7 @@ public:
     CEnemyBulletList();
     ~CEnemyBulletList();
 
-    void add(CEnemyBullet* bullet);
+    void add(std::vector<CEnemyBullet*>& bullets);
     void update(float deltaTime);
     void draw();
     EnemyBulletNode* getHead() const { return head; }
