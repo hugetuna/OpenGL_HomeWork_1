@@ -1,7 +1,5 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中繼目錄 (Debug\) 包含從其他專案 (OpenGL_HomeWork_1.vcxproj) 共用的檔案。這可能導致錯誤的清除和重建行為。
-  CBoss.cpp
+  Main.cpp
   CEnemyManager.cpp
-  CPlayer.cpp
   正在產生程式碼...
-LINK : warning LNK4098: 預設的程式庫 'MSVCRT' 與其他使用的程式庫衝突，請使用 /NODEFAULTLIB:library
   OpenGL_HomeWork_1.vcxproj -> C:\Users\user\Desktop\academical\計算機圖學\OpenGL_HomeWork_1\Debug\OpenGL_HomeWork_1.exe
